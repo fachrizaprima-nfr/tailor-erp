@@ -469,6 +469,117 @@
         .stepper-item.revisi { border-left-color: var(--danger); }
         .export-btn { background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important; margin-top: 10px !important; }
         .btn-wa { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%) !important; color: white !important; }
+
+        @media (max-width: 768px) {
+            html, body {
+                height: auto;
+                overflow-y: auto;
+            }
+
+            #mainApp, .app-layout {
+                height: auto;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            /* 1. Sidebar berpindah ke atas menjadi bilah menu geser */
+            .sidebar {
+                width: 100%;
+                height: auto;
+                padding: 12px 14px;
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .sidebar-brand {
+                padding-bottom: 10px;
+            }
+
+            .sidebar-nav {
+                flex-direction: row;
+                overflow-x: auto;
+                gap: 8px;
+                margin-top: 8px;
+                padding-bottom: 6px;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .sidebar-nav::-webkit-scrollbar {
+                display: none;
+            }
+
+            .tab-btn {
+                white-space: nowrap;
+                padding: 8px 14px;
+                font-size: 12px;
+                flex-shrink: 0;
+            }
+
+            .btn-logout {
+                margin-top: 8px;
+                padding: 8px;
+                font-size: 11.5px;
+            }
+
+            /* 2. Konten utama menyesuaikan layar HP */
+            .main-content {
+                padding: 16px 14px;
+                height: auto;
+                overflow-y: visible;
+            }
+
+            /* 3. Topbar fleksibel */
+            .topbar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .search-pill-wrapper {
+                width: 100%;
+            }
+
+            /* 4. Kartu dasbor & grid tersusun vertikal */
+            .dashboard-row-cards {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            /* 5. Kolom formulir bertumpuk ke bawah */
+            .row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .col {
+                min-width: 100% !important;
+            }
+
+            /* 6. Modal menyesuaikan lebar layar HP */
+            .modal-container {
+                width: 95%;
+                max-height: 90vh;
+                border-radius: 16px;
+            }
+
+            .modal-body {
+                padding: 14px;
+            }
+
+            .form-card {
+                padding: 16px;
+                border-radius: 16px;
+            }
+
+            .mode-container {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
